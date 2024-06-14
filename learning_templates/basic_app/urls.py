@@ -1,10 +1,11 @@
-from django.urls import path, include
-from . import views
+from django.urls import path
+from basic_app import views
 
-# TEMPLATE TAGGING
-app_name = 'basic_app' #  Django automatically will go to find this 
+#TEMPLATE URLS
+app_name = 'basic_app'
 
 urlpatterns = [
-    path('other/',views.other, name='other'),
-    path('relative/',views.relative, name='relative'),
+    path("register/",views.register,name='register'),
+    path("user_login/",views.user_login,name='user_login'),
+    path('',views.index, name='index')
 ]
